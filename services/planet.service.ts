@@ -7,7 +7,7 @@ const CANDIDATE_ID = process.env.NEXT_PUBLIC_CANDIDATE_ID;
 
 const recreateEntityOnMap = async (entity: Entity) => {
     try {
-        const endpoint = `${BASE_URL}/${entity.constructor.name.toLowerCase()}`; 
+        const endpoint = `${BASE_URL}/${entity.endpointName.toLowerCase()}`; 
         let data: any = {
             row: entity.row,
             column: entity.column,
@@ -19,7 +19,7 @@ const recreateEntityOnMap = async (entity: Entity) => {
         } else if (entity instanceof Comeths) {
             data.direction = entity.direction;
         }
-        console.log(endpoint,data);
+        console.log(endpoint, entity.endpointName);
         await axios.post(endpoint, data);
     } catch (error) {
         console.error(`Error recreating entity ${entity.constructor.name} at row ${entity.row} and column ${entity.column}:`, error);
