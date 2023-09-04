@@ -2,7 +2,7 @@
 
 <br />
 <p align="center">
-<img src="logoRatherLabs.png" alt="Logo">
+<img src="crossmintlogo.png" alt="Logo">
 
   <h3 align="center">Crossmint Challenge</h3>
 
