@@ -1,0 +1,32 @@
+/* styles.css or similar */
+.container {
+  height: 100vh; /* take full viewport height */
+  background-color: #020202;
+  background-image: url('../public/space.jpeg'); 
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center; /* center the content horizontally */
+  align-items: center; /* center the content vertically */
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #242424;
+  color: #ffffff;
+  font-size: 1rem;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.5); /* subtle white glow around button */
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05); /* slightly enlarge the button */
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8); /* increase the glow around button on hover */
+}
+
+button:active {
+  transform: scale(0.95); /* slightly decrease the size when clicked */
+}
