@@ -19,7 +19,6 @@ const recreateEntityOnMap = async (entity: Entity) => {
         } else if (entity instanceof Comeths) {
             data.direction = entity.direction;
         }
-        console.log(endpoint, entity.endpointName);
         await axios.post(endpoint, data);
     } catch (error) {
         console.error(`Error recreating entity ${entity.constructor.name} at row ${entity.row} and column ${entity.column}:`, error);
